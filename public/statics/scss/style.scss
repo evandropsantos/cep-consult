@@ -1,0 +1,27 @@
+@import 'components/test';
+@import 'helpers/variables';
+@import 'helpers/reset';
+
+.page-container {
+    @extend %all-middle;
+    min-height: 375px;
+    border-radius: map-get($configs, radius);
+    transform: translate3d(0, 50%, 0);
+    box-shadow: 3px 3px 5px #9c9494;
+
+    @media #{map-get($dimensions, mobile)} { 
+        text-align: center;
+    }
+}
+
+.container { margin: 3% 0; }
+
+.title {
+    margin: 3% 0;
+    color: map-get($colors, darken);
+    @include pxtorem(30);
+}
+
+@import 'components/form';
+@import 'components/list';
+

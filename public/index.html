@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consulta de CEP</title>
+
+    <link rel="stylesheet" href="build/style.css">
+</head>
+<body>
+    <main class="page-container">
+        <h1 class="title">Consulta de CEP</h1>
+        
+        <form method="GET" action="/cep" class="form-cep">
+            <input type="text" class="input input-cep" name="cepText" maxlength="8" placeholder="Digite o CEP para a pesquisa" />
+            <input type="submit" value="Buscar Cep" class="button button-send"  />
+        </form>
+
+        <section class="container"></section>
+    </main>
+
+    <script src="build/bundle.js"></script>
+</body>
+</html>

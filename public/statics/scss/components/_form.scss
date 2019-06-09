@@ -1,0 +1,47 @@
+.form-cep {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid map-get($colors, darken);
+    padding: 3px;
+    border-radius: map-get($configs, radius); 
+
+    @media #{map-get($dimensions, mobile)} { 
+        flex-direction: column;
+    }
+}
+
+.input {
+    border: none;
+    padding: 0 3%;
+    width: 70%;
+}
+
+.button {
+    background-color: map-get($colors, darken);
+    border: none;
+    color: white;
+    border-radius: 0 map-get($configs, radius) map-get($configs, radius) 0;
+    text-transform: uppercase;
+    width: 30%;
+    cursor: pointer;
+
+    @extend %font-bold;
+    @include prefix( transition, .5s all ease, webkit moz ms o );
+
+    &:hover {
+        background-color: map-get($colors, border);
+        
+    }
+}
+
+.input, .button {
+    height: 40px;
+    outline: none;
+
+    @include pxtorem(14);
+
+    @media #{map-get($dimensions, mobile)} { 
+        width: 100%;
+        text-align: center;
+    }
+}

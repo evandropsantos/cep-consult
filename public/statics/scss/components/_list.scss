@@ -1,0 +1,34 @@
+.list-cep {
+    list-style: none;
+    line-height: 30px;
+    color: map-get($colors, darken);
+
+    @include pxtorem(16);
+
+    li {
+        padding: 0 3%;
+        border-radius: map-get($configs, radius);
+        &:nth-child(even) { background-color: map-get($colors, bg); }
+    }
+}
+
+.loading {
+    min-height: 30px;
+    text-align: center;
+    color: map-get($colors, darken);
+    
+    @include pxtorem(14);
+
+    &::after { 
+        content: "Carregando...";
+    }
+}
+
+.msg-error {
+    padding: 2%;
+    background: lighten(red, 40%);
+    border-radius: map-get($configs, radius);
+    border: 1px solid red;
+    text-align: center;
+    color: red;
+}

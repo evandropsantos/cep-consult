@@ -1,0 +1,35 @@
+%all-middle {
+    width: 100%;
+    max-width: map-get($dimensions, maxScreen);
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 1.5%;
+
+    @media #{map-get($dimensions, mobile)} { 
+        width: 90%;
+    }
+}
+
+// Fonts
+%font-regular { 
+    font-weight: 400; 
+    font-style: normal;
+}
+
+%font-bold { font-weight: 700; }
+
+@mixin pxtorem($target, $context: 16) {
+    font-size: #{$target}px;
+    font-size: ($target/$context)+0rem;
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+ 
+  #{$property}: $value;
+}
+

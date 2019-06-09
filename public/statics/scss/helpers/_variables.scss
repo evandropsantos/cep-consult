@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+$configs: (
+    'path': '/',
+    'font': #{ '"Roboto", sans-serif' },
+    'radius': 3px
+);
+
+$colors: (
+    'bg': #ccc,
+    'border': #666,
+    'darken': #333
+);
+
+$dimensions: (
+    'mobile':   '(max-width: 800px)',
+    'desktop':  'not all and (max-width: 800px)',
+    'maxScreen': 1000px
+);
+
+@import 'functions';
