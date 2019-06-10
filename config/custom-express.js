@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 app.use((err, req, res, next) => {
     console.log('Server error. Cause:');
     console.log(err.stack);
     res.status(500).json({ message: 'internal server error' });
 });
+
+app.use(cors());
 
 app.use( express.static('public') );
 
